@@ -15,12 +15,32 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-body {
-  background-image: url("images/pinned.jpg");
-  border: 2px solid black;
-  padding: 25px;
-  background-repeat: cover;
-  background-color: #9932CC;
+body{
+    margin:0;
+}
+
+.intro{
+    background:url('https://newevolutiondesigns.com/images/freebies/cool-wallpaper-3.jpg'),linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
+    width:100%;
+    height:100vh;
+    background-size:cover;
+    background-blend-mode: hard-light;
+    animation: hue-rotate 3s linear infinite;
+}
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+    -ms-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
 }
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -41,6 +61,7 @@ body {
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
+  .intro
   <body class="d-flex h-100 text-center text-white bg-dark">
     
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
