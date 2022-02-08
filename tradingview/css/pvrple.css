@@ -1,0 +1,31 @@
+// function.scss
+@import 'https://codepen.io/masao-oops/pen/OqGNNG.scss';
+// foundation.scss
+@import 'https://codepen.io/masao-oops/pen/xBeZwG.scss';
+// layout.scss
+@import 'https://codepen.io/masao-oops/pen/KEYVjK.scss';
+// object.scss
+@import 'https://codepen.io/masao-oops/pen/MxRyga.scss';
+// utility.scss
+@import 'https://codepen.io/masao-oops/pen/WmWwwe.scss';
+
+
+body{
+	position:relative;
+	background-color:#000;
+}
+
+// .l_fixed{ position:fixed; }
+// .l_zindex-100{ z-index:100; }
+
+// .top{
+// 	position:absolute;
+// }
+// .chart{
+// 	position:relative;
+// 	// top:50px;
+// }
+
+.tradingview-widget-container{}
+.tradingview-widget-container{}
+.u_h100{height:800px;}
