@@ -16,20 +16,161 @@ h1, h2, h3, h4, h5, h6 {
 	
 <body>
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-	
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-	  
+<div class="w3-top">	
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">	  
     <a href="#home" class="w3-bar-item w3-button">Pvrple Charts</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">Main Page</a>
       <a href="#menu" class="w3-bar-item w3-button">About</a>
       <a href="#contact" class="w3-bar-item w3-button">Call Me</a>
-    </div>
-	  
+    </div>	  
   </div>
 </div>
+<section>
+	<div class="container">
+		
+		<div>
+
+	<!-- TradingView Widget BEGIN -->
+	<div class="tradingview-widget-container">
+	  <div class="tradingview-widget-container__widget"></div>
+	  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+	  {
+	  "symbols": [
+		 {
+			"description": "PVRPLE GOLD",
+			"proName": "OANDA:XAUJPY"
+		 },
+		 {
+			"description": "BLVCK CRUDE",
+			"proName": "TVC:USOIL"
+		 },
+		 {
+			"description": "USD/YEN",
+			"proName": "OANDA:USDJPY"
+		 },
+		 {
+			"description": "DJ Ind Av",
+			"proName": "DJ:DJI"
+		 },
+		 {
+			"description": "BTC/USD",
+			"proName": "BITFLYER:BTCUSD"
+		 }
+	  ],
+	  "colorTheme": "dark",
+	  "isTransparent": false,
+	  "locale": "en"
+	}
+	  </script>
+	</div>
+	<!-- TradingView Widget END -->
+	
+	<!-- TradingView Widget BEGIN -->
+	<div class="top tradingview-widget-container l_stiky l_zindex-100 u_m-b">
+	  <div class="tradingview-widget-container__widget"></div>
+	  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+	  {
+	  "symbols": [
+		 {
+			"title": "S&P500",
+			"proName": "OANDA:SPX500USD"
+		 },
+		 {
+			"title": "Shanghai Composite",
+			"proName": "INDEX:XLY0"
+		 },
+		 {
+			"title": "EUR/USD",
+			"proName": "FX_IDC:EURUSD"
+		 },
+		 {
+			"title": "BTC/USD",
+			"proName": "BITSTAMP:BTCUSD"
+		 },
+		 {
+			"title": "ETH/USD",
+			"proName": "BITSTAMP:ETHUSD"
+		 }
+	  ],
+	  "colorTheme": "dark",
+	  "isTransparent": false,
+	  "displayMode": "regular",
+	  "locale": "en"
+	}
+	  </script>
+	</div>
+	<!-- TradingView Widget END -->
+
+<!-- TradingView Widget BEGIN -->
+<div class="u_h100 tradingview-widget-container">
+  <div id="tradingview_1c226"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "autosize": false,
+  "width": 980,
+  "height": 610,
+  "symbol": "BITFINEX:BTCUSD",
+  "interval": "1",
+  "timezone": "Africa/Johannesburg",
+  "theme": "Dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": true,
+  "allow_symbol_change": true,
+  "hotlist": true,
+  "calendar": true,
+  "news": [
+    "headlines"
+  ],
+		  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": true,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "details": true,
+  "hideideas": true,
+  "studies": [
+    "RSI@tv-basicstudies",
+    "MASimple@tv-basicstudies",
+    "MASimple@tv-basicstudies",
+    "MASimple@tv-basicstudies"
+    
+  ],
+  "container_id": "tradingview_1c226"
+}
+  );
+  </script><!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/forex-screener/" rel="noopener" target="_blank"><span class="blue-text">Forex Screener</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+  {
+  "width": "1100",
+  "height": "523",
+  "defaultColumn": "overview",
+  "defaultScreen": "top_gainers",
+  "showToolbar": true,
+  "locale": "en",
+  "market": "forex",
+  "colorTheme": "dark"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+	
+</div>
+<!-- TradingView Widget END -->
+
+
+</div>
+	
+	</div>
+	
+</section>
 
 
 
