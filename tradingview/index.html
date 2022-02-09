@@ -7,7 +7,9 @@
     <meta name="author" content="Pvprle Blvck">
     <meta name="generator" content="Hugo 0.88.1">
     <link href="css/slide.css" rel="stylesheet">
+    <link href="css/prices.css" rel="stylesheet">
     <script src="javascript/slide.js"></script>
+    <script src="javascript/prices.js"></script>
     <title>Pvprle Blvck</title>
   
     <link rel="canonical" href="images/doves.jpg">
@@ -100,7 +102,41 @@
   <input type="radio" id="slideCheckbox5" name="slide"></input>
   <div class="slide">
     <div class=".slide__html">
-      <a class="nav-link" href="layout/pricing.html">PRICING</a>
+      <!-- Canvas -->
+<canvas class="orb-canvas"></canvas>
+<!-- Overlay -->
+<div class="overlay">
+  <!-- Overlay inner wrapper -->
+  <div class="overlay__inner">
+    <!-- Title -->
+    <h1 class="overlay__title">
+      Hey, would you like to learn how to create a
+      <span class="text-gradient">generative</span> UI just like this?
+    </h1>
+    <!-- Description -->
+    <p class="overlay__description">
+      In this tutorial we will be creating a generative “orb” animation
+      using pixi.js, picking some lovely random colors and pulling it all
+      together in a nice frosty UI.
+      <strong>We're gonna talk accessibility, too.</strong>
+    </p>
+    <!-- Buttons -->
+    <div class="overlay__btns">
+
+      <button class="overlay__btn overlay__btn--transparent">
+        <a href="https://georgefrancis.dev/writing/create-a-generative-landing-page-and-webgl-powered-background/" target="_blank">
+
+          View Tutorial
+        </a>
+      </button>
+
+      <button class="overlay__btn overlay__btn--colors">
+        <span>Charts</span>
+        <span class="overlay__btn-emoji">🎨</span>
+      </button>
+    </div>
+  </div>
+</div>
     </div>  
   </div>
   <!-- Add more slides here!
