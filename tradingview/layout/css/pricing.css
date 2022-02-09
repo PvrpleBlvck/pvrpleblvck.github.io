@@ -39,7 +39,7 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background:#e74c3c;
+  background:#280428;
 }
 #container{
   width:80%;
@@ -193,7 +193,7 @@ h3{
   width:50%;
   height:50px;
   margin:0 auto 0 auto;
-  background:#ff9547;
+  background:#34094a;
   text-align:center; 
   cursor:pointer;
   -moz-transition: all 0.4s ease-in-out;
