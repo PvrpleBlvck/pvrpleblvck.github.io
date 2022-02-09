@@ -29,7 +29,7 @@ body {
     height: 100%;
     background: -moz-linear-gradient(270deg, rgba(34,46,64,1) 0%, rgb(66 18 114) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(34,46,64,1)), color-stop(100%, rgb(65 10 106) 100%)));
-    background: -webkit-linear-gradient(270deg, rgba(34,46,64,1) 0%, rgba(81,195,184,1) 100%);
+    background: -webkit-linear-gradient(270deg, rgba(34,46,64,1) 0%, #130326 100%);
     background: linear-gradient(180deg, rgba(34,46,64,1) 0%, rgb(45 11 70) 100%);
     overflow:hidden;
 }
@@ -584,7 +584,7 @@ input {
 }
 .form-wrap .tabs h3 a.active span {
     padding-bottom: 4px;
-    border-bottom: 1px solid #5FD1C1;
+    border-bottom: 1px solid #130326;
 }
 .form-wrap .tabs-content {
     padding: 1.5em 3em;
@@ -621,7 +621,7 @@ input {
     padding: .2em 3em;
     width: auto;
     display: block;
-    background-color: #28A55F;
+    background-color: #130326;
     border: none;
     color: #fff;
     cursor: pointer;
