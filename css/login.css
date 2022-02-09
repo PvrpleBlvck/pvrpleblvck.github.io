@@ -520,22 +520,22 @@ a.button:hover {
     background-size: cover;
 }
 #slideshow .one {
-    background-image: url("css/1.png");
+    background-image: url("images/1.png");
     background-repeat: no-repeat;
     background-position: 0% 50%;
 }
 #slideshow .two {
-    background-image: url("css/2.png");
+    background-image: url("images/2.png");
     background-repeat: no-repeat;
     background-position: 0% 50%;
 }
 #slideshow .three {
-    background-image: url("css/4.png");
+    background-image: url("images/4.png");
     background-repeat: no-repeat;
     background-position: 0% 5%;
 }
 #slideshow .four {
-    background-image: url("css/5.png");
+    background-image: url("images/5.png");
     background-repeat: no-repeat;
     background-position: 0% 50%;
 }
