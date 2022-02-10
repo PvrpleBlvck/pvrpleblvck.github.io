@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <title>
+      Pvrple Dive into Django
+    </title>
+  </head>
+  <body>
+    <div class="carousel">
+  <div class="slides">
+    <div class="slide current" data-index="0">
+      <h2>Django</h2>
+      <h3>What is it? What is it good for?</h3>
+      <h6>1 of 20</h6>
+    </div>
+    <div class="slide" data-index="1">
+      <h2>What is Django?</h2> 
+      <p>Django is the name of a gypsy jazz guitarist.</p>
+      <p>It is also a backend framework, written in python, for building database-driven Web applications.</p>
+      <ul>
+      <li><p><span class="bold">Models</span>: Django comes with an object-relational mapper which you can use to describe your database layout. It works with databases like PostgreSQL, MySQL and Oracle.</p></li>
+      <li><p><span class="bold">URLs:</span> Django gives you a clean and elegant way to define your URL routing without the cruft of .php or .asp.</p> 
+      <li><p><span class="bold">Views:</span> Views handle the Http requests routed via the URL scheme.</p></li> 
+      <li><p><span class="bold">Templates:</span> Django has a template system that helps you display specific information based on the occasion and situation.</p></li> 
+      </ul>
+      <h6>2 of 20</h6>
+    </div>
+    <div class="slide " data-index="2">
+      <h2>Making a Django Project</h2>
+      <p>A Django project is a Python package – i.e. a directory of code – that contains all the settings for an instance of Django. This includes database configuration, Django-specific options and application-specific settings. </p>
+      <p>Run the following command to auto-generate code to set up a basic Django Project:</p>
+      <div class="code">
+        <pre>$ django-admin startproject traction_site</pre>
+      </div>
+      <h6>3 of 20</h6>
+    </div>
+    <div class="slide " data-index="3">
+      <h3>Django Project Directory Structure</h3>
+      <p>The <span class="code">startproject</span> command creates a traction_site directory. Here's what <span class="code">startproject</span> created:</p>
+
+      <pre>
+      traction_site/
+        manage.py
+        traction_site/
+          __init__.py
+          settings.py
+          urls.py
+          wsgi.py
+      </pre>
+      <ul>
+        <li>The outer <span class="code">traction_site/</span> root directory is just a container for your project.</li>
+
+        <li><span class="code">manage.py</span>: A command-line utility for DB migrations, running the development server among other things.</li>
+
+        <li>The inner <span class="code">traction_site/</span> directory is the actual Python package for your project.</li>
+
+        <li><span class="code">traction_site/__init__.py</span>: An empty file that tells Python that this directory is a Python package.</li>
+
+        <li><span class="code">traction_site/settings.py</span>: Settings/configuration for the Django project.</p>
+
+          <li><span class="code">traction_site/urls.py</span>: The URL declarations for this Django project and their associated views.</li>
+          <li><span class="code">mysite/wsgi.py</span>: An entry-point for WSGI-compatible web servers to serve your project.</li>
+      </ul>
+      <h6>4 of 20</h6>
+    </div>
+    <div class="slide " data-index="4">
+      <h3>Running the Development Server</h3>
+      <p>Let’s verify your Django project works by running the development server:</p>
+      <div class="code"><pre>
+$ python manage.py runserver
+</pre></div>
+      <p>You can see the server is running by opening http://127.0.0.1:8000/ in your browser.</p>
+
+      <p>By default, the server's port is 8000 but if you want to change it, specify the port number after runserver in the command line:</p>
+      <div class="code"><pre>
+$ python manage.py runserver 8080
+</pre></div>
+      <p>This command starts the server on port 8080.</p>
+
+      <h6>5 of 20</h6>
+    </div>
+    <div class="slide " data-index="5">
+      <h2>What about applications?</h2>
+      <p>Didn't you say in the beginning that Django is for developing web applications????</p> 
+
+<p>Now that you have an set up your environment – aka “project” – is set up, you can start creating applications.</p>
+
+<p>What’s the difference between a project and an app? A Web application does something – e.g., a blogging platform, a database of patents or a simple poll app. A project is a collection of configuration and apps for a particular website.</p> 
+<p>A project can contain multiple apps. An app can be in multiple projects.  This modularity is a very powerful feature of Django.  It allows you to easily add and remove apps/functionality for your website.  Once you write one app, you can use it for other projects.</p>
+
+      <h6>6 of 20</h6>
+    </div>
+    <div class="slide " data-index="6">
+      <h3>Creating an app</h3>
+      <p>Each application you write in Django consists of a Python package that follows a certain convention. Django comes with a utility that automatically generates the basic directory structure of an app, so you can focus on writing code rather than creating directories.</p>
+      <p>To create an app, go to the same directory as manage.py and type this command:</p>
+      <div class="code">
+<pre>
+$ python manage.py startapp case_studies
+</pre>
+      </div>
+
+      <h6>7 of 20</h6>
+    </div>
+    <div class="slide" data-index="7">
+      <h3 class="code">App directory structure</h3>
+      <p><span class="code">startapp</span> created a directory case_studies, which is laid out like this:</p>
+<pre>
+case_studies/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    urls.py
+    views.py
+</pre>
+      <p><span class="code">urls.py</span>: The URL configuration for the case_studies app.  
+      </p>
+
+      <h6>8 of 20</h6>
+    </div>
+    <div class="slide " data-index="8">
+      <h3 class="code">App routing in a Project</h3>
+      <p>To add the case_studies route to your website, point to the root URLconf at the case_studies.urls module.  Open traction_site/urls.py and modify it so you have:</p>
+<div class="code"><pre>
+urlpatterns = [
+    url(r'^case_studies/', include('case_studies.urls')),
+    url(r'^admin/', admin.site.urls),
+]
+</pre></div>
+<p>Now run the server and open the url http://localhost:8000/case_studies/ in the browser. You should see the text “Hello, world. You’re at the case_studies index.”, which was defined in the index view.</p>      
+     <h6>9 of 20</h6>
+    </div>
+    <div class="slide " data-index="9">
+      <h3>Application View and Models</h3>
+      <p>Most applications will want to render some information when an Http request is made. The <span class="code">views.py</span> contains the views, aka python callback functions, that handle HTTP requests.</p>
+      <p>They must return an HttpResponse or raise an exception like Http404.  In most cases, they will also render to a template but they can also return JSON.</p>
+
+      <p>In general, views will render data from the database. In <span class="code">models.py</span>, you define the structure of your data.  Models can contain any number of fields.  Django has a wide variety of predefined types like boolean, character, date, image, file, etc...</p>
+      <h6>10 of 20</h6>
+    </div>
+    <div class="slide " data-index="10">
+      <h3>Where does the data come from?</h3>
+      <p>We talked about defining data and rendering data. But where does the data come from?</p>
+      
+      <p>Django was invented in the newsroom which means information was authored by journalists aka non-developers. So how they access the database, add, modify and/or delete information?</p>
+      <p>Django provides generates admin interfaces for all your models automatically.</p>  
+      <h6>11 of 20</h6>
+    </div>
+    <div class="slide " data-index="11">
+      <h3>The Admin Interface</h3>
+      <p>The Admin interface is a very useful feature.  It's also very simple to use. To register and modify the admin interface for a given field, write you specifications in <span class="code">admin.py</span>.  You can configure the order of your fields, group or even omit them.</p>
+      <p>By default, Django uses meta information from the model to generate an admin interface.  For example, if your model has an image field with a technically descriptive name, you can also give it a user friendly name via the verbose_name attribute as well as give the user image dimension requirements using the help_text attribute.  Both verbose_name and help_text are used in the admin interface.</p>
+<div class="code"><pre>
+class Post(models.Model):
+    class Meta:
+        verbose_name=_('Blog Post')
+        verbose_name_plural=_('Blog Posts')
+
+    tile_image = FilerImageField(
+        verbose_name=_('Listing Image'),
+        blank=True,null=True,
+        help_text='Image size: 400x400',
+    )
+</pre></div>
+  
+      <h6>12 of 20</h6>
+    </div>
+     <div class="slide " data-index="12">
+       <h3>Configuring the Admin</h3>
+       <p>With Django, you can modify the appearance of the admim like the order and grouping of fields. In <span class="code">admin.py</span>, create a new admin that inherits from <span class="code">ModelAdmin</span>. Here you can alter the admin to your exact specifications. Remember to register it with the site.</p> 
+<div class="code"><pre>
+class WordAdmin(admin.ModelAdmin):
+       #list of groups (aka fieldsets) and the fields in each group.
+    _fieldsets = [
+        (None, {
+            'fields': ['title', ('category','tags'), 'abstract', 'list_image']
+        }),
+        ('Header Images', {
+            'fields': ['header_desktop_image', 'header_tablet_image'],
+        }),
+        ('Publishing', {
+            'fields': (('status'), ('date_published')),
+        }),
+    ]
+    readonly_fields = ['page_link']
+
+#registering the WordAdmin as the admin for the Word Model
+admin.site.register(Word, WordAdmin)
+</pre></div>
+      <h6>13 of 20</h6>
+    </div>
+    <div class="slide" data-index="13">
+      <h2>Conclusion</h2>
+      <p>Django is a framework for writing database driven web apps.  It's written in python and has some pretty neat features.</p>
+      <p>If you are looking for modularity, re-use and flexibility, Django give an environment that let's you build apps and mix and match in your websites.</p>
+      <p>Additionally, it was has a handy built-in admin interface that let's site managers and content producers access, add, modify and delete information in an easy to use web interface.</p>
+      
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="https://www.djangoproject.com/">https://www.djangoproject.com/</a></li>
+        <li><a href="https://www.python.org/">https://www.python.org/</a></li>
+        </ul>
+      <h6>14 of 20</h6>
+    </div>
+    <div class="slide" data-index="14">
+      <h2>Epilogue</h2>
+      <p>Up next is DjangoCMS.</p>
+      <h6>15 of 20</h6>
+    </div>
+ </div>
+  <div class="arrow prev">&lt;</div>
+  <div class="arrow next">&gt;</div>
+</div>
+  </body>
+
+</html>
